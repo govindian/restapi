@@ -1,0 +1,85 @@
+Request method:	POST
+Request URI:	https://www.rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "Govind",
+    "phone_number": "9812313",
+    "address": "3163 PB",
+    "website": null,
+    "language": "English",
+    "types": [
+        "test1",
+        "test2"
+    ],
+    "accuracy": 50,
+    "location": {
+        "lat": -38.383494,
+        "lng": 33.427362
+    }
+}
+HTTP/1.1 200 OK
+Date: Sun, 10 May 2020 12:41:15 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "ddf4d2250854b0c416cbf57ae4678649",
+    "scope": "APP",
+    "reference": "f3f218693a05a84103391534e8bd2d8ff3f218693a05a84103391534e8bd2d8f",
+    "id": "f3f218693a05a84103391534e8bd2d8f"
+}
+Request method:	GET
+Request URI:	https://www.rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=ddf4d2250854b0c416cbf57ae4678649
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=ddf4d2250854b0c416cbf57ae4678649
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Sun, 10 May 2020 12:41:16 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 195
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-38.383494",
+        "longitude": "33.427362"
+    },
+    "accuracy": "50",
+    "name": "Govind",
+    "phone_number": "9812313",
+    "address": "3163 PB",
+    "types": "test1,test2",
+    "website": "",
+    "language": "English"
+}
