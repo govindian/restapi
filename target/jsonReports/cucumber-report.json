@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-05-10T12:41:14.296Z",
+        "start_timestamp": "2020-05-10T19:39:11.288Z",
         "line": 14,
         "name": "Verify that add new place functionality is working fine",
         "description": "",
@@ -13,7 +13,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1222000000,
+              "duration": 1523396700,
               "status": "passed"
             },
             "line": 4,
@@ -39,7 +39,7 @@
           },
           {
             "result": {
-              "duration": 1661000000,
+              "duration": 1658378500,
               "status": "passed"
             },
             "line": 5,
@@ -61,7 +61,7 @@
           },
           {
             "result": {
-              "duration": 2000000,
+              "duration": 1988200,
               "status": "passed"
             },
             "line": 6,
@@ -79,7 +79,7 @@
           },
           {
             "result": {
-              "duration": 670000000,
+              "duration": 612172200,
               "status": "passed"
             },
             "line": 7,
@@ -101,7 +101,7 @@
           },
           {
             "result": {
-              "duration": 23000000,
+              "duration": 20868500,
               "status": "passed"
             },
             "line": 8,
@@ -123,7 +123,7 @@
           },
           {
             "result": {
-              "duration": 589000000,
+              "duration": 891616700,
               "status": "passed"
             },
             "line": 9,
@@ -147,6 +147,105 @@
         "tags": [
           {
             "name": "@AddPlace"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-10T19:39:16.078Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.Hooks.addPlace()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "Verify that place is deleted successfully",
+        "description": "",
+        "id": "validating-place-api-s;verify-that-place-is-deleted-successfully",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1994800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Delete place api",
+            "match": {
+              "location": "stepDefinition.StepDefinition.delete_place_api()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 378024900,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "user calls add \"delPlaceAPI\" with \"POST\" http request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"delPlaceAPI\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"POST\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.user_calls_add_with_http_request(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "API call is success and response code is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 41
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.api_call_is_success_and_response_code_is(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18949800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"status\"",
+                  "offset": 0
+                },
+                {
+                  "val": "\"OK\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinition.StepDefinition.in_response_body_is_ok(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DeletePlace"
           }
         ]
       }
